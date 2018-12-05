@@ -27,7 +27,30 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
         <!-- CONTENT WEB DITULIS DISINI -->
 
+          <table class="table table-striped table-bordered data">
+              <thead>
+                  <tr>      
+                    <th>No</th>
+                    <th>Judul Berita</th>
+                    <th>Isi Berita</th>
+                    <th>Tanggal Upload</th>                   
+                    <th>Pilihan</th>
+                  </tr>
+                </thead>
 
+                <tbody>
+                   <?php 
+                   $no = 0;
+                   foreach ($berita as $data){ 
+                    $no++;  ?>
+                   <td><?php echo $no; ?></td>
+                   <td><?php echo $data->judul_berita; ?></td>
+                   <td><?php echo $data->isi_berita; ?></td>
+                   <td><?php echo $data->tgl_upload; ?></td>
+                   <td></td>
+                   <?php } ?>
+                </tbody>
+          </table>
 
 
 

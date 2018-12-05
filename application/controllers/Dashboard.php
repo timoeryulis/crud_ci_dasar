@@ -7,10 +7,12 @@ class Dashboard extends CI_Controller {
                 parent::__construct();
                 // Your own constructor code
                 $this->load->database();
-                
+
 		$this->load->model('data');
     }
     function index(){
-    	$this->load->view('index');
+    	$data['berita'] = $this->data->tampil_data()->result();
+		//print_r($data['berita']);die();
+    	$this->load->view('index',$data);
     }
 }
