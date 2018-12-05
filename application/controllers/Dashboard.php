@@ -7,6 +7,8 @@ class Dashboard extends CI_Controller {
                 parent::__construct();
                 // Your own constructor code
                 $this->load->database();
+                
+		$this->load->model('data');
     }
     function index(){
     	$this->load->view('index');
