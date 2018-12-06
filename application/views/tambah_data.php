@@ -29,7 +29,47 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
         <!-- CONTENT WEB DITULIS DISINI -->
 
-          
+                <div class="col-lg-12">
+                  <section class="panel panel-default">
+                    <header class="panel-heading font-bold">Form Kirim Berita</header>
+                    <div class="panel-body">
+                      <form class="bs-example form-horizontal" method="POST" action="proses_tambah_data">
+                        <div class="form-group">
+                          <label class="col-lg-2 control-label">Judul Berita</label>
+                          <div class="col-lg-10">
+                            <input type="text" class="form-control" placeholder="Judul Berita" name="judul_berita">                           
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-lg-2 control-label">Berita</label>
+                          <div class="col-lg-10">
+                            <textarea class="form-control" rows="12" name="isi_berita"></textarea>
+                          </div>
+                        </div>
+
+                         <div class="form-group">
+                            <label class="col-lg-2 control-label">Tanggal Upload:</label>
+                            <div class="col-lg-10">
+                            <div class="input-group date ">
+                              <div class="input-group-addon">
+                                <i class="fa fa-calendar"></i>
+                              </div>
+                              <input type="text" class="form-control pull-right" id="datepicker">
+                            </div>
+                          </div>
+                            <!-- /.input group -->
+                          </div>
+                        
+                        <div class="form-group">
+                          <div class="col-lg-offset-2 col-lg-10">
+                            <button type="submit" class="btn btn-sm btn-default">Kirim</button>
+                          </div>
+                        </div>
+                         
+                      </form>
+                    </div>
+                  </section>
+                </div>
 
 
 
@@ -66,6 +106,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="<?php echo base_url();?>assets/bootstrap/js/bootstrap.min.js"></script>
 <!-- AdminLTE App -->
 <script src="<?php echo base_url();?>assets/dist/js/app.min.js"></script>
+
+<!-- bootstrap datepicker -->
+<script src="<?php echo base_url();?>assets/plugins/datepicker/bootstrap-datepicker.js"></script>
+
+<script type="text/javascript">
+  //Date picker
+    $('#datepicker').datepicker({
+      autoclose: true
+    });
+</script>
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the

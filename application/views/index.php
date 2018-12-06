@@ -30,7 +30,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
         <!-- CONTENT WEB DITULIS DISINI -->
 
-          <table class="table table-striped table-bordered data">
+          <table id="example1" class="table table-bordered table-striped">
               <thead>
                   <tr>      
                     <th>No</th>
@@ -95,7 +95,22 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="<?php echo base_url();?>assets/bootstrap/js/bootstrap.min.js"></script>
 <!-- AdminLTE App -->
 <script src="<?php echo base_url();?>assets/dist/js/app.min.js"></script>
-
+<!-- DataTables -->
+<script src="<?php echo base_url();?>assets/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="<?php echo base_url();?>assets/plugins/datatables/dataTables.bootstrap.min.js"></script>
+<script>
+  $(function () {
+    $("#example1").DataTable();
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false
+    });
+  });
+</script>
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
      user experience. Slimscroll is required when using the
