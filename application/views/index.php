@@ -25,6 +25,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Main content -->
     <section class="content">
 
+      <a href="data/tambah_data"> Tambah Data</a>
+      <br>
+
         <!-- CONTENT WEB DITULIS DISINI -->
 
           <table class="table table-striped table-bordered data">
@@ -39,16 +42,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </thead>
 
                 <tbody>
-                   <?php 
-                   $no = 0;
-                   foreach ($berita as $data){ 
-                    $no++;  ?>
+                  <?php 
+                  $no = 0;
+                  foreach($berita as $data){
+                    $no++;
+                   ?>
                    <td><?php echo $no; ?></td>
                    <td><?php echo $data->judul_berita; ?></td>
                    <td><?php echo $data->isi_berita; ?></td>
-                   <td><?php echo $data->tgl_upload; ?></td>
-                   <td></td>
+                   <td><?php echo date("d-F-Y",strtotime($data->tgl_upload)) ; ?></td>
+                   <td>
+                     <a href="">Edit</a>&nbsp&nbsp
+                     <a href="" style="color: red;">Hapus</a>
+                   </td>
                    <?php } ?>
+              
                 </tbody>
           </table>
 

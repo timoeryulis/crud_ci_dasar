@@ -24,7 +24,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'http://localhost/crud_ci_dasar/';
-$config['assets'] = "assets";
+
+
 /*
 |--------------------------------------------------------------------------
 | Index File
@@ -35,7 +36,7 @@ $config['assets'] = "assets";
 | variable so that it is blank.
 |
 */
-$config['index_page'] = '';
+$config['index_page'] = 'index.php';
 
 /*
 |--------------------------------------------------------------------------
